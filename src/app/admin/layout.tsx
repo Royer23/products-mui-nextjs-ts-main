@@ -15,7 +15,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
             style={{ flexGrow: 1 }}
             color={'text.primary'}
           >
-            Mi Aplicación de Noticias
+            Mi Aplicación de Productos
           </Typography>
           <Button
             color="primary"

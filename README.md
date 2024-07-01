@@ -75,7 +75,7 @@ npm run dev
 yarn dev
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+Abre [http://localhost:8080](http://localhost:8080) en tu navegador para ver la aplicación.
 
 ### Configuración de Imágenes
 

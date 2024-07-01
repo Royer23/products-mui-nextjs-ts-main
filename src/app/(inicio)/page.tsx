@@ -1,14 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Container, Typography } from '@mui/material'
-import NewsList from './ui/NewsList'
 import ProductsList from './ui/ProductsList'
-import { News } from '../../types/News'
 import axios from 'axios'
 import { Products } from '../../types/Products'
 
 const HomePage: React.FC = () => {
-  const [news, setNews] = useState<News[]>([])
   const [products, setProducts] = useState<Products[]>([])
   const [loading, setLoading] = useState<boolean>(true)
 

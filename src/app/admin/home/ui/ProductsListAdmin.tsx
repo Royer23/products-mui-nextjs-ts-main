@@ -103,10 +103,10 @@ const ProductsListAdmin: React.FC = () => {
         titulo={'Alerta'}
         texto={`¿Esta seguro de borrar el producto?`}
       >
-        <Button variant={'outlined'} onClick={cerrarAlertaBorrar}>
+        <Button variant={'outlined'} onClick={cerrarAlertaBorrar} data-testid="cancelar-eliminar">
           Cancelar
         </Button>
-        <Button variant={'contained'} onClick={aceptarAlertaBorrar}>
+        <Button variant={'contained'} onClick={aceptarAlertaBorrar} data-testid="aceptar-eliminar">
           Aceptar
         </Button>
       </AlertDialog>
@@ -115,7 +115,7 @@ const ProductsListAdmin: React.FC = () => {
         handleClose={cerrarModal}
         title={'Editar producto'}
       >
-        <ModalProducts producto={currentProduct} handleClose={cerrarModal} />
+        <ModalProducts  producto={currentProduct} handleClose={cerrarModal} />
       </CustomDialog>
       <Grid container sx={{ pb: 2 }}>
         <Grid item xs={6} sm={6} md={6}>
@@ -129,6 +129,7 @@ const ProductsListAdmin: React.FC = () => {
             flexDirection={'row'}
           >
             <Button
+              data-testid="agregar-producto"
               variant={'contained'}
               onClick={() => {
                 setOpenModalEdicion(true)
@@ -174,7 +175,7 @@ const ProductsListAdmin: React.FC = () => {
                           editarProducto(item)
                         }}
                         name={'editar'}
-                        id={`${item.id}`}
+                        id={`editar-producto-${item.id}`}
                       />
                       <IconoTooltip
                         titulo={'eliminar'}
@@ -184,7 +185,7 @@ const ProductsListAdmin: React.FC = () => {
                           abrirAlertaBorrar(item)
                         }}
                         name={'eliminar'}
-                        id={`${item.id}`}
+                        id={`eliminar-producto-${item.id}`}
                       />
                     </Box>
                   </Grid>

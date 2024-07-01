@@ -1,0 +1,26 @@
+describe('template spec', () => {
+  it('passes', () => {
+    cy.visit('http://localhost:8080/')
+    cy.contains('Ingresar').should('be.visible')
+    cy.get('[data-testid="ingresar"]').should('be.visible')
+    cy.get('[data-testid="ingresar"]').click()
+    cy.contains('Inicio de Sesión').should('be.visible')
+    cy.get('#email').type('user1@example.com')
+    cy.get('#contrasena').type('password123')
+    cy.get('[data-testid="iniciar-sesion"]').click()
+    cy.contains('Mi Aplicación de Productos').should('be.visible')
+    cy.contains('Agregar').should('be.visible')
+    cy.get('[data-testid="agregar-producto"]').should('be.visible')
+    cy.get('[data-testid="agregar-producto"]').click()
+    cy.get('#titulo').should('be.visible')
+    cy.get('#titulo').type('Producto de Prueba')
+    cy.get('#description').should('be.visible')
+    cy.get('#description').type('Descripcion del Producto de Prueba')
+    cy.get('#price').should('be.visible')
+    cy.get('#price').type('50.00')
+    cy.get('[data-testid="guardar-producto"]').should('be.visible')
+    cy.get('[data-testid="guardar-producto"]').click()
+    
+    
+  })
+})

@@ -20,7 +20,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
             Inicio
           </Button>
           
-          <Button color="primary" component={Link} href="/login">
+          <Button data-testid="ingresar" color="primary" component={Link} href="/login">
             Ingresar
           </Button>
         </Toolbar>

@@ -44,7 +44,7 @@ const DetalleProducto = () => {
   }, [])
 
   return products ? (
-    <Box>
+    <Box >
       <Button
         variant="text"
         color="primary"
@@ -54,6 +54,7 @@ const DetalleProducto = () => {
         <Icono>arrow_back</Icono> Volver Atrás
       </Button>
       <Image
+        data-testid={`producto-image-${products.id}`}
         src={`https://picsum.photos/200/100?random=${products.id}`}
         alt={products.name}
         width={800}
@@ -62,14 +63,16 @@ const DetalleProducto = () => {
       />
       <List>
         <ListItem>
-          <ListItemText
-            primary={<Typography variant="h5">{products.name}</Typography>}
+          <ListItemText 
+            primary={<Typography data-testid={`producto-name-${products.id}`}
+            variant="h5">{products.name}</Typography>}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary={
-              <Typography variant="body2" color="text.secondary">
+              <Typography data-testid={`producto-price-${products.id}`}
+              variant="body2" color="text.secondary">
                 {products.price}
               </Typography>
             }

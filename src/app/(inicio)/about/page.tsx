@@ -9,8 +9,7 @@ export default function About() {
         Acerca de Nosotros
       </Typography>
       <Typography variant="body1" paragraph>
-        Bienvenido a Mi Aplicación de Noticias. Aquí encontrarás las últimas
-        noticias de tecnología.
+        Bienvenido a Mi Aplicación de Productos. Aquí encontrarás varios productos.
       </Typography>
       <Typography variant="body1" paragraph>
         Nuestra misión es proporcionar información actualizada y relevante del

@@ -22,7 +22,7 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
     <Grid container spacing={2}>
       {products.map((item) => (
         <Grid item xs={12} sm={6} md={4} key={item.id}>
-          <Card>
+          <Card data-testid={`producto-${item.id}`}>
             <CardActionArea
               onClick={(event) => {
                 router.push(`/products/${item.id}`)

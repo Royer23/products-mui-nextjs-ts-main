@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "cypress.config.js", "cypress/e2e/login-fallido.spec.cy.js"  ],
   "exclude": [
     "node_modules"
   ]

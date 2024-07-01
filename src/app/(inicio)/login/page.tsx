@@ -123,7 +123,7 @@ const LoginContainer = () => {
                 fullWidth
                 disabled={loading}
               >
-                <Typography sx={{ fontWeight: '600' }}>
+                <Typography data-testid="iniciar-sesion" sx={{ fontWeight: '600' }}>
                   Iniciar sesión
                 </Typography>
               </Button>

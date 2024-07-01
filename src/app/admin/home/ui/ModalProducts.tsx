@@ -108,7 +108,12 @@ export const ModalProducts = ({ producto, handleClose }: Props) => {
               size={'medium'}
               labelVariant={'subtitle1'}
               disabled={loading}
-              rules={{ required: 'Este campo es requerido' }}
+              rules={{ required: 'Este campo es requerido',
+                pattern: {
+                  value: /^\d+(\.\d{1,2})?$/,
+                  message: 'El precio debe ser un número válido con hasta dos decimales',
+                },
+               }}
               
             />
           </Grid>
@@ -117,6 +122,7 @@ export const ModalProducts = ({ producto, handleClose }: Props) => {
           </Box>
           <Box sx={{ height: 15 }}></Box>
           <Button
+            data-testid="guardar-producto"
             type="submit"
             variant="contained"
             fullWidth
