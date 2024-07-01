@@ -10,10 +10,32 @@ Una aplicación de productos construida con Next.js, TypeScript y Material-UI, u
 - Uso de Material-UI para una interfaz de usuario moderna y responsiva.
 - Uso de imágenes optimizadas con `next/image`.
 
+## Pruebas con Cypress
+
+- Flujos Críticos:
+     login
+     crear producto
+     editar producto
+     ver producto
+     eliminar producto
+- Flujos Alternos:
+     crear producto fallido
+     editar producto fallido
+     login fallido
 ## Estructura del Proyecto
 
 ```plaintext
 my-products-app/
+├── cypress/
+│   ├── e2e/
+│   │   ├── agregar-producto-fallido.spec.cy.js
+│   │   ├── crear-producto.spec.cy.js
+│   │   ├── editar-producto-fallido.spec.cy.js
+│   │   ├── editar-producto.spec.cy.js
+│   │   ├── eliminar-producto.spec.cy.js
+│   │   ├── login-fallido.spec.cy.js
+│   │   ├── milogin.spec.cy.js
+│   │   └── ver-producto.spec.cy.js
 ├── public/
 ├── src/
 │   ├── app/
@@ -43,6 +65,7 @@ my-products-app/
 
 - Node.js
 - npm o yarn
+- Cypress
 
 ### Instalación
 
