@@ -11,13 +11,15 @@ Una aplicación de productos construida con Next.js, TypeScript y Material-UI, u
 - Uso de imágenes optimizadas con `next/image`.
 
 ## Pruebas con Cypress
-
+-Comando para ejecutar Cypress:
+     npx cypress open
 - Flujos Críticos:
      login
      crear producto
      editar producto
      ver producto
      eliminar producto
+  
 - Flujos Alternos:
      crear producto fallido
      editar producto fallido
