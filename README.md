@@ -1,6 +1,6 @@
-# Demo - Aplicación de Noticias
+# Demo - Aplicación de Productos
 
-Una aplicación de noticias de tecnología construida con Next.js, TypeScript y Material-UI, utilizando el App Router para la renderización del lado del servidor (SSR) y la revalidación de páginas desde el backend.
+Una aplicación de productos construida con Next.js, TypeScript y Material-UI, utilizando el App Router para la renderización del lado del servidor (SSR) y la revalidación de páginas desde el backend.
 
 ## Características
 
@@ -13,23 +13,23 @@ Una aplicación de noticias de tecnología construida con Next.js, TypeScript y 
 ## Estructura del Proyecto
 
 ```plaintext
-my-news-app/
+my-products-app/
 ├── public/
 ├── src/
 │   ├── app/
 │   │   ├── about/
 │   │   │   └── page.tsx
 │   │   ├── api/
-│   │   │   └── news/
+│   │   │   └── products/
 │   │   │       └── route.ts
 │   │   ├── revalidate/
 │   │   │   └── route.ts
 │   │   └── page.tsx
 │   ├── components/
-│   │   └── NewsList.tsx
+│   │   └── ProductsList.tsx
 │   ├── styles/
 │   ├── types/
-│   │   └── News.ts
+│   │   └── Products.ts
 ├── .gitignore
 ├── package.json
 ├── tsconfig.json
@@ -49,13 +49,13 @@ my-news-app/
 1. Clona el repositorio:
 
    ```bash
-   git clone git@github.com:IonVillarreal/news-mui-nextjs-ts.git
+   git clone git@github.com:Royer23/products-mui-nextjs-ts.git
    ```
 
 2. Instala las dependencias:
 
    ```bash
-   cd news-mui-nextjs
+   cd products-mui-nextjs
    npm install
    # o
    yarn install
@@ -96,31 +96,28 @@ const nextConfig = {
 module.exports = nextConfig
 ```
 
-## API Endpoints
-
-Disponible en [https://github.com/IonVillarreal/node-prisma-notas](https://github.com/IonVillarreal/node-prisma-notas)
 
 ### Obtener Noticias
 
-Endpoint: `/api/news`
+Endpoint: `/api/products`
 
 Método: `GET`
 
-Descripción: Devuelve un array de objetos de noticias.
+Descripción: Devuelve un array de objetos de prodcutos.
 
 ## Componentes
 
-### Componente `NewsList`
+### Componente `ProductsList`
 
-Ubicación: `src/app/components/NewsList.tsx`
+Ubicación: `src/app/components/ProductsList.tsx`
 
-Descripción: Renderiza una lista de noticias en formato de tarjetas.
+Descripción: Renderiza una lista de productos en formato de tarjetas.
 
 ### Página Principal
 
 Ubicación: `src/app/page.tsx`
 
-Descripción: Renderiza la página principal con noticias de tecnología utilizando SSR y actualización periódica en el cliente.
+Descripción: Renderiza la página principal con productos utilizando SSR y actualización periódica en el cliente.
 
 ### Página "Acerca de"
 
